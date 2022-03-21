@@ -1829,6 +1829,12 @@ Created by Upverter.com</description>
 <part name="GND68" library="supply1" deviceset="GND" device=""/>
 <part name="+3V19" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND69" library="supply1" deviceset="GND" device=""/>
+<part name="C17" library="1AKarstenLib" deviceset="C-EU_SMD" device="C1206H/D"/>
+<part name="C18" library="1AKarstenLib" deviceset="C-EU_SMD" device="C1206H/D"/>
+<part name="C19" library="1AKarstenLib" deviceset="C-EU_SMD" device="C1206H/D"/>
+<part name="GND70" library="supply1" deviceset="GND" device=""/>
+<part name="GND71" library="supply1" deviceset="GND" device=""/>
+<part name="GND72" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1952,8 +1958,8 @@ Created by Upverter.com</description>
 <instance part="P-3" gate="1" x="68.58" y="76.2"/>
 <instance part="P+22" gate="1" x="86.36" y="109.22"/>
 <instance part="GND37" gate="1" x="132.08" y="-38.1" rot="R90"/>
-<instance part="P+23" gate="1" x="81.28" y="-38.1" rot="R90"/>
-<instance part="P+24" gate="1" x="88.9" y="-40.64" rot="R90"/>
+<instance part="P+23" gate="1" x="68.58" y="-38.1" rot="R90"/>
+<instance part="P+24" gate="1" x="83.82" y="-40.64" rot="R90"/>
 <instance part="C1" gate="G$1" x="294.64" y="30.48" rot="R90"/>
 <instance part="R1" gate="G$1" x="276.86" y="30.48" rot="R180"/>
 <instance part="DIG1" gate="G$1" x="287.02" y="60.96" rot="R270"/>
@@ -2066,6 +2072,12 @@ Created by Upverter.com</description>
 <instance part="GND68" gate="1" x="441.96" y="-116.84"/>
 <instance part="+3V19" gate="G$1" x="424.18" y="-134.62" rot="R90"/>
 <instance part="GND69" gate="1" x="467.36" y="-134.62" rot="R90"/>
+<instance part="C17" gate="G$1" x="91.44" y="-48.26"/>
+<instance part="C18" gate="G$1" x="76.2" y="-45.72"/>
+<instance part="C19" gate="G$1" x="91.44" y="104.14" rot="R90"/>
+<instance part="GND70" gate="1" x="101.6" y="104.14" rot="R90"/>
+<instance part="GND71" gate="1" x="76.2" y="-58.42"/>
+<instance part="GND72" gate="1" x="91.44" y="-58.42"/>
 </instances>
 <busses>
 </busses>
@@ -2415,6 +2427,21 @@ Created by Upverter.com</description>
 <pinref part="GND69" gate="1" pin="GND"/>
 <pinref part="C16" gate="G$1" pin="2"/>
 <wire x1="459.74" y1="-134.62" x2="464.82" y2="-134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C19" gate="G$1" pin="2"/>
+<pinref part="GND70" gate="1" pin="GND"/>
+<wire x1="99.06" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C18" gate="G$1" pin="2"/>
+<pinref part="GND71" gate="1" pin="GND"/>
+<wire x1="76.2" y1="-55.88" x2="76.2" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C17" gate="G$1" pin="2"/>
+<pinref part="GND72" gate="1" pin="GND"/>
+<wire x1="91.44" y1="-55.88" x2="91.44" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -3308,17 +3335,29 @@ Created by Upverter.com</description>
 <segment>
 <pinref part="CON1" gate="G$1" pin="1"/>
 <pinref part="P+22" gate="1" pin="+5V"/>
-<wire x1="86.36" y1="106.68" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="106.68" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="C19" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="104.14" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="104.14" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
+<junction x="86.36" y="104.14"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$0" pin="1_VDD"/>
 <pinref part="P+23" gate="1" pin="+5V"/>
-<wire x1="83.82" y1="-38.1" x2="96.52" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-38.1" x2="76.2" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="-38.1" x2="96.52" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="-43.18" x2="76.2" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="76.2" y="-38.1"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$0" pin="2_VDD"/>
 <pinref part="P+24" gate="1" pin="+5V"/>
+<wire x1="86.36" y1="-40.64" x2="91.44" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="C17" gate="G$1" pin="1"/>
 <wire x1="91.44" y1="-40.64" x2="96.52" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="-45.72" x2="91.44" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="91.44" y="-40.64"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
