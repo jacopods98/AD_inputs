@@ -3546,6 +3546,9 @@ Created by Upverter.com</description>
 <approved hash="113,1,383.54,-135.615,R15,,,,,"/>
 <approved hash="113,1,455.93,-132.422,C16,,,,,"/>
 <approved hash="113,1,436.88,-135.615,R16,,,,,"/>
+<approved hash="113,1,93.6379,-49.53,C17,,,,,"/>
+<approved hash="113,1,78.3979,-46.99,C18,,,,,"/>
+<approved hash="113,1,92.71,106.338,C19,,,,,"/>
 </errors>
 </schematic>
 </drawing>
